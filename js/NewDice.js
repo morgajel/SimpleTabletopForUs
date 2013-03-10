@@ -58,25 +58,24 @@
 //	Configurable math ops.
 //	Configurable dice ops.
 //	Configurable formatting ops.
-//  Real time macros forming the basis of the interactive in interactive character sheet.
-//	Jquery plugin
+//	Jquery plugin ready.
+//	Jasmine tests.
 //	Done "right"
 //	
-//	$.fn.YojinDiceRoller = function(diceOps, mathOps, formatOps){}();
 
 /*
- *  The TTF Namespace.
- *	Table Top Forge.
+ *  The STFU Namespace.
+ *	Simple Tabletop For Us.
  */
-if (!TTF) {
-	var TTF = {};
+if (!STFU) {
+	var STFU = {};
 }	
 
 /*
  * DiceRoller
  * Responsible for taking a dice string and returning formatted results.
  */
-TTF.DiceRoller = function(){
+STFU.DiceRoller = function(){
 
 	/*
 	 *	DiceRoller.Macros

@@ -1,0 +1,180 @@
+/* 	CSS for the Simple Tabletop For Us google plus hangout.
+ *	It's proably crap, fix me!
+ */
+ 
+/********************************* css reset *********************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a:focus {
+  outline: none;
+}
+
+
+/********************************* nav panel *********************************/
+#nav {  
+	/* 	This should fix the menu to the very bottom of the screen,
+	overlay it on top of everything and make it semi-transparent. */
+	position: fixed;  
+	bottom:0;
+	z-index:100;
+	color: #bbb;
+	font-size:11px;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 2px black;
+	background-color: rgba(1, 1, 1, 0.4);
+	-webkit-box-shadow: 0px 0px 8px 0px #212121;
+	-moz-box-shadow: 0px 0px 8px 0px #212121;
+	box-shadow: 0px 0px 8px 0px #212121;
+}
+#nav, #nav > ul{	
+	/* Setting fonts for the menu so that they don't mess with the doc fonts.*/
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+}
+#nav > ul{	
+	/* Forcing padding to be off and putting it where ever the base doc wants it */
+	padding: 0;
+	position: relative;	
+}
+#nav > ul li{	
+	/* Taking auto-bullet points off the list items */
+	margin: 0;
+	padding: 0;
+	list-style: none;	
+}
+#nav > ul > li{
+	/* Making the menu horizontal. */
+	float: left;
+	position: relative;	
+}
+#nav > ul > li > a{
+	/* 
+	Padding here determines how thick the top menu is, and how far the menu 
+	items are away from each other.  
+	Tweak these to make things look just right.
+	The display: block; sets the top menu to the padding height.
+	*/
+	padding: 10px 14px;
+	display: block;
+	/* Color of the top menu fonts */
+	color: white;	
+	text-transform: uppercase;
+	font-size: 13px;
+}
+#nav > ul > li:hover > a{
+	/* The color you want the top menu background to turn on hover */
+	background-color: rgba(16, 128, 255, 0.3);
+}
+#nav > ul ul{
+	/* The menu displays 
+	The opacity / visibility thing is for backwards compatability.
+	Position needs to be absolute.	
+	*/
+	background-color: rgba(1, 1, 1, 0.5);
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	
+	/* The drop down effect on the menus */
+	-webkit-transition: all .15s .1s ease-in-out;
+	-moz-transition: all .15s .1s ease-in-out;
+	-ms-transition: all .15s .1s ease-in-out;
+	transition: all .15s .1s ease-in-out;	
+}
+#nav > ul li:hover ul{
+	/* Again the opacity visibility thing.*/
+	opacity: 1;
+	visibility: visible;
+	margin: 0;
+	z-index: 100;
+	/* The top here should be calculated based on the width of the top bar.
+	For the most part I just eyeball it but there's probably a better way */
+	bottom:40px;
+	left: 0;	
+}
+#nav > ul ul li a{
+	/* The width and height of the menu items */
+	padding: 8px 26px;
+	display: block;
+	max-width: 550px;
+	min-width: 150px;
+	
+	/* Font stuff for the menu items */
+	color: white;
+	font-size: 13px;
+	text-decoration: none;
+	text-transform: uppercase;	
+	
+	/* Pretty little highlight bar on the left in it's unhighlighted state */
+	border-left: 4px solid transparent;	
+	
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-ms-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+	
+	/* adding text shadow in the hopes that it makes reading text on transparent
+	a little eaiser */
+	text-shadow: 1px 1px 5px black;
+}
+#nav > ul ul li a:hover{
+	/* Highlight bar when it's all lit up */
+	border-left: 4px solid #18f;
+	background-color: rgba(1, 1, 1, 0.6);
+	color: white;
+	/* Glowy effect on hovered menu items. */
+	text-shadow: 0px 0px 15px #aaa;
+}
+
+input[type=text] {
+	/* Makes the dice rolling input text all pretty */
+    border: 2px solid white; 
+    -webkit-box-shadow: inset 0 0 8px  rgba(0,0,0,0.1), 0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: inset 0 0 8px  rgba(0,0,0,0.1), 0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: inset 0 0 8px  rgba(0,0,0,0.1), 0 0 16px rgba(0,0,0,0.1); 
+    padding: 9px;
+    background: rgba(255,255,255,0.5);
+    margin: 0 0 1px 1px;
+	width:400px;
+	min-width: 100px;
+	max-width: 600px;
+}
+/********************************* whiteboard ********************************/
+#whiteboard{
+	/* TODO: Work */
+	min-width:5000px;
+	min-height: 5000px;
+	background: #fff;	/* fuss with this when you want to see where it is. */
+}
+
+/*********************************** results **********************************/

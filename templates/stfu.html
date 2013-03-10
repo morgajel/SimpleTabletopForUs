@@ -1,0 +1,93 @@
+<!--
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+        <ModulePrefs title="Simple Tabletop For Us">
+                <Require feature="rpc" />
+                <Require feature="views" />
+                <Require feature="locked-domain" />
+        </ModulePrefs>
+        <Content type="html"><![CDATA[ 
+-->    
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Dropbears!">
+	<link rel="stylesheet" type="text/css" media="screen" href="stfu.css">
+    <title>Simple Tabletop For Us</title>
+</head>
+
+<body>
+
+<!-- Results -->
+<div id="results">
+	<ul id="result_list">
+		<li>
+			<p id="rolled">What was typed</p>
+			<p id="result">The result.</p>
+			<button id='pin' text='pin' />
+			<button id='close' text='X' />
+		</li>
+	</ul>
+</div>
+
+<!-- Whiteboard -->
+<div id="main">
+	<canvas id='whiteboard' /> 	
+</div>
+
+<!-- Navigation Panel -->
+<nav id="nav" class="outer">
+	<ul class="inner">		
+		<li><a href="#">Rolls</a>
+			<ul>
+				<li><a href='#'>Attack: 1d20+8</a></li>
+				<li><a href='#'>Rage Dmg: 2d6+1d6+1+4+10+8+6d6</a></li>
+				<li><a href='#'>Init: 1d20+4</a></li>
+				<li><a href='#'>Wis Save: 1d20-1</a></li>
+				<li><a href='#'>Dex Save: 1d20+5</a></li>
+			</ul>
+		</li>
+		<li> 
+			<input id= 'dicetext' type='text' value='init: 1d20+4' />
+		</li>
+		<li><a href="#">Weight</a>
+			<ul>
+				<li><a href="#">1 px </a></li>
+				<li><a href="#">2 px </a></li>
+				<li><a href="#">3 px </a></li>
+				<li><a href="#">4 px </a></li>
+				<li><a href="#">5 px </a></li>				
+			</ul>
+		</li>
+		<li><a href="#">Shapes</a>
+			<ul>
+				<li><a href="#">Squiggly Line</a></li>
+				<li><a href="#">Straight Line</a></li>
+				<li><a href="#">Boxes</a></li>
+				<li><a href="#">Circles</a></li>				
+			</ul>
+		</li>
+		<li><a href="#">Colors</a>
+			<ul>
+				<li><a href="#"> Red </a></li>
+				<li><a href="#"> Green </a></li>
+				<li><a href="#"> Blue </a></li>
+				<li><a href="#"> Cyan </a></li>
+				<li><a href="#"> Magenta </a></li>
+				<li><a href="#"> Yellow </a></li>
+				<li><a href="#"> Black </a></li>
+				<li><a href="#"> White </a></li>
+				<li><a href="#"> Custom <input type="color" name="favcolor" /></a></li>
+			</ul>
+		</li>
+	</ul>    
+</nav>
+</body>
+</html>
+<!--
+]]>
+</Content>
+</Module>
+-->
