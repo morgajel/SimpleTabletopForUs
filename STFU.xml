@@ -9,12 +9,12 @@
 
 <html>
     <head>
-        <link  href='https://github.com/morgajel/SimpleTabletopForUs/blob/development/css/style.css' type='text/css' rel='stylesheet'/>
-        <script type="text/javascript" src="https://github.com/morgajel/SimpleTabletopForUs/blob/development/js/jquery-1.9.1.min.js"></script>
-        <script type="text/javascript" src="https://github.com/morgajel/SimpleTabletopForUs/blob/development/js/jquery.tmpl.min.js"></script>
-        <script type="text/javascript" src="https://github.com/morgajel/SimpleTabletopForUs/blob/development/js/knockout-2.2.1.min.js"></script>
-        <script type="text/javascript" src="https://github.com/morgajel/SimpleTabletopForUs/blob/development/js/NewDice.js"></script>
-        <script type="text/javascript" src="https://github.com/morgajel/SimpleTabletopForUs/blob/development/js/stfu.js"></script>
+        <link                         href='https://raw.github.com/morgajel/SimpleTabletopForUs/development/css/style.css' type='text/css' rel='stylesheet'/>
+        <script type="text/javascript" src="https://raw.github.com/morgajel/SimpleTabletopForUs/development/js/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="https://raw.github.com/morgajel/SimpleTabletopForUs/development/js/jquery.tmpl.min.js"></script>
+        <script type="text/javascript" src="https://raw.github.com/morgajel/SimpleTabletopForUs/development/js/knockout-2.2.1.min.js"></script>
+        <script type="text/javascript" src="https://raw.github.com/morgajel/SimpleTabletopForUs/development/js/NewDice.js"></script>
+        <script type="text/javascript" src="https://raw.github.com/morgajel/SimpleTabletopForUs/development/js/stfu.js"></script>
         <script src="//hangoutsapi.talkgadget.google.com/hangouts/_/api/hangout.js?v=1.4"></script>
     </head>
 <body>
