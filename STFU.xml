@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+        <ModulePrefs title="Simple Tabletop For Us">
+                <Require feature="rpc" />
+                <Require feature="views" />
+                <Require feature="locked-domain" />
+        </ModulePrefs>
+        <Content type="html"><![CDATA[     
+
+<html>
+    <head>
+        <link  href='https://github.com/morgajel/SimpleTabletopForUs/blob/development/css/style.css' type='text/css' rel='stylesheet'/>
+        <script type="text/javascript" src="https://github.com/morgajel/SimpleTabletopForUs/blob/development/js/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="https://github.com/morgajel/SimpleTabletopForUs/blob/development/js/jquery.tmpl.min.js"></script>
+        <script type="text/javascript" src="https://github.com/morgajel/SimpleTabletopForUs/blob/development/js/knockout-2.2.1.min.js"></script>
+        <script type="text/javascript" src="https://github.com/morgajel/SimpleTabletopForUs/blob/development/js/NewDice.js"></script>
+        <script type="text/javascript" src="https://github.com/morgajel/SimpleTabletopForUs/blob/development/js/stfu.js"></script>
+        <script src="//hangoutsapi.talkgadget.google.com/hangouts/_/api/hangout.js?v=1.4"></script>
+    </head>
+<body>
+<p> Testing Jordan's Dice Roller</p>
+
+    <div id="inputs">
+        <textarea id="input_text">{"processOrder":["attributes","modifiers"],"attributes":{"str":4,"con":3,"dex":2,"wis":1,"int":0,"cha":-1},"modifiers":{"check": "+1d20","spot": "4+wis","bluff": "cha+7"}}
+        </textarea><br />
+        <input type="button" value="Import JSON" onclick="importJSON();" />
+        <input type="button" value="Export JSON" onclick="exportJSON();" />
+        <input type="button" value="Run Tests" onclick="runTests();" />
+        <input type="button" value="Console Test" onclick="regexTest();" />
+        <br />
+        <input type="text" id="dice_text" value="1ad100 + 1dd100"></input>
+        <input type="button" value="Test" onclick="testDiceText();" />
+        <input type="button" value="Clear" onclick="clearResults();" />
+    </div>
+    <div id="results"></div>
+
+<script>
+function init() {
+  // When API is ready...                                                         
+  gapi.hangout.onApiReady.add(
+      function(eventObj) {
+        if (eventObj.isApiReady) {
+          document.getElementById('showParticipants')
+            .style.visibility = 'visible';
+        }
+      });
+}
+
+// Wait for gadget to load.                                                       
+gadgets.util.registerOnLoadHandler(init);
+</script>
+</body>
+</html>
+]]>
+</Content>
+</Module>
