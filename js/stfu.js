@@ -4,7 +4,7 @@ function publishResults(r){
 	results.innerHTML += r + "<br />";
 }
 function test(dice){
-	var diceRoller = TTF.DiceRoller;
+	var diceRoller = DiceRoller;
 	
 	publishResults(dice);
 	publishResults(diceRoller.roll(dice));
@@ -12,7 +12,7 @@ function test(dice){
 }
 function testDice(dice, low, high){
 	publishResults(dice);
-	var r = TTF.DiceRoller.roll(dice);
+	var r = DiceRoller.roll(dice);
 	publishResults(r);
 	var val = parseInt(r);
 	if (r>high || r<low){
@@ -22,7 +22,7 @@ function testDice(dice, low, high){
 function testText(dice, result){
 
 	publishResults(dice);
-	var r = TTF.DiceRoller.roll(dice);
+	var r = DiceRoller.roll(dice);
 	publishResults(r);
 	if (r.indexOf(result) !== 0){	
 		console.log(r.indexOf(result));
@@ -69,13 +69,13 @@ function testParse(t){
 }
 function exportJSON(){
 	var results = document.getElementById("input_text");
-	console.log(TTF.DiceRoller.getMacros());
-	results.innerHTML = TTF.DiceRoller.getMacros();
+	console.log(DiceRoller.getMacros());
+	results.innerHTML = DiceRoller.getMacros();
 }
 function importJSON(){
 	var results = document.getElementById("input_text").value;
 	console.log(results);
-	TTF.DiceRoller.setMacros(results);
+	DiceRoller.setMacros(results);
 }
 function clearResults(){
 	var results = document.getElementById("results");
@@ -83,7 +83,7 @@ function clearResults(){
 }
 function testDiceText(){
 	var dt = document.getElementById("dice_text").value;
-	var diceRoller = TTF.DiceRoller;	
+	var diceRoller = DiceRoller;	
 	var results = document.getElementById("results");
 	results.innerHTML = dt + "<br />" + diceRoller.roll(dt) + "<br />" + results.innerHTML ;	
 }
