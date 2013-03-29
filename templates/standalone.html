@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../css/standalone.css">
+		<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="../js/knockout-2.2.1.js"></script>
+		<script type="text/javascript" src="../js/standalone.js"></script>
+		<script type="text/javascript" src="../js/diceroller.js"></script>
+	</head>
+	<body>
+		<div id="stfuapp">
+			<div class="title">
+				<h1>STFU</h1>
+			</div>
+			<div class="dicerolls">
+				<ul data-bind="foreach: tasks, visible: tasks().length > 0" id="roll-list">
+				    <li>
+						<div class="roll">
+							<div class="display" data-bind="css: { pinned: isPinned }">
+								<input class="check" type="checkbox" data-bind="checked: isPinned" />
+								<a href="#" class="roll-reroll" data-bind="click: $parent.reroll">re-roll</a>
+						        <a href="#" class="roll-destroy" data-bind="click: $parent.removeTask">&times;</a>
+								<div class="roll-text" data-bind="html: displayText, click: $parent.pushText"></div>
+							</div>							
+						</div>						
+				    </li> 
+				</ul>
+			</div>
+			
+			<form data-bind="submit: addTask" id="create-roll">
+			    <input class="new-roll" data-bind="value: createRollText" placeholder="Simple Tabletop For Us" />
+			</form>
+
+			<b data-bind="text: incompleteTasks().length">&nbsp;</b> pinned.
+			<span data-bind="visible: incompleteTasks().length == 0"> - pinhole...</span>
+			<a data-bind="visible: completeTasks().length > 0, click: removeCompleted " href="#" id="clear-completed">Clear Pinned</a>
+		</div>		
+		<div id="credits">
+			<p>Click to re-roll.</p>
+		</div>		
+	</body>
+</html>

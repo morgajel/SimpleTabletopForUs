@@ -312,7 +312,23 @@ STFU.DiceRoller = function(){
 		function formatDice(result, sides){
 			// Takes a value, and the number of sides on the dice.  
 			// Returns correctly formatted text/html.
-			return "[" + result + " on a d" + sides + "]";
+			//return "[" + result + " on a d" + sides + "]";
+			switch(sides){
+				case 4:
+					return "<span class='d4'>" + result + "</span>";
+				case 6:
+					return "<span class='d6'>" + result + "</span>";
+				case 8:
+					return "<span class='d8'>" + result + "</span>";
+				case 10:
+					return "<span class='d10'>" + result + "</span>";
+				case 12:
+					return "<span class='d12'>" + result + "</span>";
+				case 20:
+					return "<span class='d20'>" + result + "</span>";
+				default:
+					return "<span class='dx'>" + result + "</span>";
+			}
 		}
 		function formatTokens(txt1, opTxt, txt2){
 			// Takes 3 strings, returns one.
